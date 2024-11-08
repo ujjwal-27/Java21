@@ -1,6 +1,5 @@
 package Revision.TreeSets;
 
-import java.util.Arrays;
 import java.util.TreeSet;
 
 public class Main {
