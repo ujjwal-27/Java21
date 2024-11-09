@@ -15,5 +15,9 @@ public class Main {
         Collections.sort(students);
 
         System.out.println(students);
+
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(students.get(i).name + " : " + students.get(i).age);
+        }
     }
 }
