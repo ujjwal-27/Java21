@@ -16,8 +16,17 @@ public class Main {
 
         System.out.println(students);
 
+        // FOR-LOOP
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i).name + " : " + students.get(i).age);
         }
+
+        // FOR EACH LOOP
+        students.forEach(student -> {
+            String name = student.name;
+            int age = student.age;
+
+            System.out.println(name + " : " + age);
+        });
     }
 }
