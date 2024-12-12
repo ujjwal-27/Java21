@@ -23,7 +23,10 @@ public class DemoJdbc {
         String sql = "Select name from student where sid = 1"; // simple sql query
         Statement statement = connection.createStatement(); // creating reference object for createStatement (a method of Connection interface)
         ResultSet rs = statement.executeQuery(sql); // method executeQuery() returns data of type ResultSet
-        System.out.println(rs.next()); // if there is data in next row it returns true, else false
+        rs.next(); // initially the pointer will be right above the data we are fetching. Using next() method will point to the exact data which we are trying to fetch.
+
+        String name = rs.getString("name"); // fetching name column
+        System.out.println("Name of the student is " + name);
 
         connection.close();
         System.out.println("connection closed");
