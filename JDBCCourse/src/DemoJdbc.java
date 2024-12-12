@@ -20,19 +20,9 @@ public class DemoJdbc {
         Connection connection = DriverManager.getConnection(url, uname, pass); // creating connection
         System.out.println("connection established");
 
-        String sql = "Select * from student"; // simple sql query
+        String sql = "Insert into student values (4, 'Optimus', 55)"; // simple sql query
         Statement statement = connection.createStatement(); // creating reference object for createStatement (a method of Connection interface)
-        ResultSet rs = statement.executeQuery(sql); // method executeQuery() returns data of type ResultSet
-
-        /*
-         * Basically, rs.next() gives us next row or checks if there is next row available or not. Likewise, it points to the next row.
-         * Based on type of data that the column holds, 'get' method is used
-         */
-        while (rs.next()) {
-            System.out.print(rs.getInt("sid") + " - ");
-            System.out.print(rs.getString("name") + " - ");
-            System.out.println(rs.getInt("marks"));
-        }
+        statement.execute(sql);
 
         connection.close();
         System.out.println("connection closed");
