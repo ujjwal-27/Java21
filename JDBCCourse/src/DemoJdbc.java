@@ -20,6 +20,9 @@ public class DemoJdbc {
         Connection connection = DriverManager.getConnection(url, uname, pass); // creating connection
         System.out.println("connection established");
 
-        Statement statement = connection.createStatement();
+        String sql = "Select name from student where sid = 1"; // simple sql query
+        Statement statement = connection.createStatement(); // creating reference object for createStatement (a method of Connection interface)
+        ResultSet rs = statement.executeQuery(sql); // method executeQuery() returns data of type ResultSet
+        System.out.println(rs.next()); // if there is data in next row it returns true, else false
     }
 }
