@@ -17,8 +17,6 @@ public class DemoJdbc {
         String uname = "postgres";
         String pass = "postgres";
 
-        // Loading and registering driver. This step is optional. It throws ClassNotFoundException which must be handled through try/catch. Since this is just demo, we'll duck exception.
-        Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, uname, pass); // creating connection
         System.out.println("connection established");
 
