@@ -22,5 +22,6 @@ public class DemoJdbc {
         Connection connection = DriverManager.getConnection(url, uname, pass); // creating connection
         System.out.println("connection established");
 
+        Statement statement = connection.createStatement();
     }
 }
