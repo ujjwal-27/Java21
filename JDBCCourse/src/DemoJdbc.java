@@ -24,5 +24,6 @@ public class DemoJdbc {
         Statement statement = connection.createStatement(); // creating reference object for createStatement (a method of Connection interface)
         ResultSet rs = statement.executeQuery(sql); // method executeQuery() returns data of type ResultSet
         System.out.println(rs.next()); // if there is data in next row it returns true, else false
+        connection.close();
     }
 }
