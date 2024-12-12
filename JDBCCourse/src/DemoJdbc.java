@@ -20,7 +20,7 @@ public class DemoJdbc {
         Connection connection = DriverManager.getConnection(url, uname, pass); // creating connection
         System.out.println("connection established");
 
-        String sql = "Insert into student values (4, 'Optimus', 55)"; // simple sql query
+        String sql = "Update student set name = 'Prime' where sid = 4"; // simple sql query
         Statement statement = connection.createStatement(); // creating reference object for createStatement (a method of Connection interface)
         statement.execute(sql);
 
