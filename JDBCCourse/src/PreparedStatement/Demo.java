@@ -15,16 +15,11 @@ public class Demo {
         System.out.println("connection established");
 
         int sid = 4;
-        String name = "Payne";
-        int marks = 77;
 
-        String sql = "Update student set name = ?, marks = ? where sid = ?"; // simple sql query
+        String sql = "Delete from student where sid = ?"; // simple sql query
         PreparedStatement statement = connection.prepareStatement(sql); // creating reference object for createStatement (a method of Connection interface)
-
-        statement.setString(1, name);
-        statement.setInt(2, marks);
-        statement.setInt(3, sid);
-//        statement.setInt(3, marks);
+        
+        statement.setInt(1, sid);
 
         statement.execute();
 
