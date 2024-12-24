@@ -17,5 +17,8 @@ public class App
         // By default, getBean provides an object. Here, we're typecasting the object to Alien.
         Alien alien = (Alien) context.getBean("alien");
         alien.code();
+
+        Alien alien2 = (Alien) context.getBean("alien");
+        alien2.code();
     }
 }
