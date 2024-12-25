@@ -6,6 +6,7 @@
 <!--  By default, the scope is 'singleton' on bean tag  -->
 
     <bean id="alien" class="org.example.Alien" scope="prototype">
+        <property name="age" value="27"></property>
     </bean>
 
     <bean id="laptop" class="org.example.Laptop">
