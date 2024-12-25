@@ -1,7 +1,7 @@
 package org.example;
 
 public class Alien {
-    int age;
+    private int age;
 
     public Alien() {
         System.out.println("This is alien");
@@ -12,6 +12,7 @@ public class Alien {
     }
 
     public void setAge(int age) {
+        System.out.println("age setter called");
         this.age = age;
     }
 
