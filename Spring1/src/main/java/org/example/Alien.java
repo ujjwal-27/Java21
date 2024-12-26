@@ -11,7 +11,7 @@ public class Alien {
     public void code() {
         System.out.println("Coding");
 
-        lap.compile();
+        lap.compile(); // Invoking compile() method of Laptop bean/class
     }
 
     public int getAge() {
