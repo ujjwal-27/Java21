@@ -10,7 +10,7 @@
 <!--        <property name="age" value="27"></property>-->
 <!--        <property name="lap" ref="laptop"></property>-->
 
-        <constructor-arg index="0" value="21" />
+        <constructor-arg index="0" value="27" />
         <constructor-arg index="1" value="999999" />
         <constructor-arg index="2" ref="laptop" />
     </bean>
