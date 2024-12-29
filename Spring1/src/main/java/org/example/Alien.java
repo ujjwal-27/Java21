@@ -9,12 +9,12 @@ public class Alien {
         System.out.println("This is alien");
     }
 
-    public Alien(int age, int salary, Laptop lap) {
-        System.out.println("Alien param constructor called");
-        this.age = age;
-        this.salary = salary;
-        this.lap = lap;
-    }
+//    public Alien(int age, int salary, Laptop lap) {
+//        System.out.println("Alien param constructor called");
+//        this.age = age;
+//        this.salary = salary;
+//        this.lap = lap;
+//    }
 
     public void code() {
         System.out.println("Coding");
