@@ -6,7 +6,7 @@ public class Alien {
     private Computer computer;
 
     public Alien() {
-        System.out.println("This is alien");
+//        System.out.println("This is alien");
     }
 
 //    public Alien(int age, int salary, Laptop lap) {
@@ -17,7 +17,7 @@ public class Alien {
 //    }
 
     public void code() {
-        System.out.println("Coding");
+//        System.out.println("Coding");
 
         computer.compile(); // Invoking compile() method of Laptop bean/class
     }
@@ -35,7 +35,7 @@ public class Alien {
     }
 
     public void setAge(int age) {
-        System.out.println("age setter called");
+//        System.out.println("age setter called");
         this.age = age;
     }
 
