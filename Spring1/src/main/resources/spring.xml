@@ -17,7 +17,7 @@
 <!--        <constructor-arg index="2" ref="laptop" />-->
     </bean>
 
-    <bean id="computer" class="org.example.Laptop" primary="true">
+    <bean id="computer" class="org.example.Laptop" primary="true" lazy-init="true">
     </bean>
 
     <bean id="computer2" class="org.example.Desktop">
