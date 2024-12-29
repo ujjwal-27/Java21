@@ -2,6 +2,7 @@ package org.example;
 
 public class Alien {
     private int age;
+
     private int salary;
     private Laptop lap;
 
@@ -30,6 +31,10 @@ public class Alien {
         return lap;
     }
 
+    public int getSalary() {
+        return salary;
+    }
+
     public void setAge(int age) {
         System.out.println("age setter called");
         this.age = age;
@@ -37,5 +42,9 @@ public class Alien {
 
     public void setLap(Laptop lap) {
         this.lap = lap;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 }
