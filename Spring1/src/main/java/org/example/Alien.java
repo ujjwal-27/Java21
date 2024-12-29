@@ -3,7 +3,7 @@ package org.example;
 public class Alien {
     private int age;
     private int salary;
-    private Laptop lap;
+    private Computer computer;
 
     public Alien() {
         System.out.println("This is alien");
@@ -19,15 +19,15 @@ public class Alien {
     public void code() {
         System.out.println("Coding");
 
-        lap.compile(); // Invoking compile() method of Laptop bean/class
+        computer.compile(); // Invoking compile() method of Laptop bean/class
     }
 
     public int getAge() {
         return age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComputer() {
+        return computer;
     }
 
     public int getSalary() {
@@ -39,8 +39,8 @@ public class Alien {
         this.age = age;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setComputer(Computer computer) {
+        this.computer = computer;
     }
 
     public void setSalary(int salary) {
