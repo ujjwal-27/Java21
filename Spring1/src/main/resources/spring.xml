@@ -5,10 +5,14 @@
 
 <!--  By default, the scope is 'singleton' on bean tag  -->
 
-    <bean id="alien" class="org.example.Alien" scope="prototype">
+    <bean id="alien" class="org.example.Alien">
 <!--   In the attribute 'name', the instance variable name i.e. age should be provided. Then, it will look for the 'setter method' i.e. setAge() of 'age' variable, and pass the value: 27 through parameter of setter method. This is how setter injection works.     -->
-        <property name="age" value="27"></property>
-        <property name="lap" ref="laptop"></property>
+<!--        <property name="age" value="27"></property>-->
+<!--        <property name="lap" ref="laptop"></property>-->
+
+        <constructor-arg index="0" value="27" />
+        <constructor-arg index="1" value="999999" />
+        <constructor-arg index="2" ref="laptop" />
     </bean>
 
     <bean id="laptop" class="org.example.Laptop">

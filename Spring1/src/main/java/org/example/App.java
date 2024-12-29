@@ -21,6 +21,7 @@ public class App
         // If the scope is 'singleton', both the reference variable i.e. alien2 and alien2 would refer to same object.
         Alien alien = (Alien) context.getBean("alien");
         System.out.println(alien.getAge());
+        System.out.println(alien.getSalary());
         alien.code();
     }
 }
