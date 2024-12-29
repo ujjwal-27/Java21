@@ -2,7 +2,6 @@ package org.example;
 
 public class Alien {
     private int age;
-
     private int salary;
     private Laptop lap;
 
