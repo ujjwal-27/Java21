@@ -23,5 +23,7 @@ public class App
         System.out.println(alien.getAge());
         System.out.println(alien.getSalary());
         alien.code();
+
+        Laptop laptop = (Laptop) context.getBean("computer");
     }
 }
