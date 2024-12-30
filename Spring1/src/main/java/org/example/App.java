@@ -19,7 +19,7 @@ public class App
         // By default, getBean() returns an object. Here, we're typecasting Alien as reference.
         // Since the 'scope' of Alien bean is 'prototype', it creates two different objects as it is being called twice.
         // If the scope is 'singleton', both the reference variable i.e. alien2 and alien2 would refer to same object.
-        Alien alien = (Alien) context.getBean("alien");
+        Alien alien = context.getBean(Alien.class);
         System.out.println(alien.getAge());
         System.out.println(alien.getSalary());
         alien.code();
