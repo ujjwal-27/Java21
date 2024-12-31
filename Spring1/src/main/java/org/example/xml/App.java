@@ -1,4 +1,4 @@
-package org.example;
+package org.example.xml;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -24,6 +24,6 @@ public class App
         System.out.println(alien.getSalary());
         alien.code();
 
-        Laptop laptop = (Laptop) context.getBean("computer");
+//        Laptop laptop = (Laptop) context.getBean("computer"); // This bean will not be accessible here because it is being used as an inner bean for Alien class.
     }
 }
