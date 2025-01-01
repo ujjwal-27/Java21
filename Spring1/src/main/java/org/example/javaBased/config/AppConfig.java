@@ -10,7 +10,12 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class AppConfig {
-    @Bean
+    /**
+     * By default, the method's name is the Bean name.
+     * But, a bean can be named manually by parsing the required name through the parameter of @Bean annotation.
+     * @return Bean object
+     */
+    @Bean("imac")
     public Desktop desktop() {
         return new Desktop();
     }
