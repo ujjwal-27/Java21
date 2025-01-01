@@ -1,6 +1,6 @@
-package org.example;
+package org.example.javaBased;
 
-import org.example.config.AppConfig;
+import org.example.javaBased.config.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,6 +1,6 @@
-package org.example.config;
+package org.example.javaBased.config;
 
-import org.example.Desktop;
+import org.example.javaBased.Desktop;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
