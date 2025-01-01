@@ -4,12 +4,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- By default, the scope is 'singleton' on bean tag -->
-    <bean id="alien" class="org.example.xml.Alien" autowire="byType">
+    <bean id="alien" class="org.example.xmlBased.Alien" autowire="byType">
         <!-- In the attribute 'name', the instance variable name i.e. age should be provided. Then, it will look for the 'setter method' i.e. setAge() of 'age' variable, and pass the value: 27 through parameter of setter method. This is how setter injection works. -->
         <property name="age" value="27" />
         <property name="salary" value="100000000" />
         <property name="computer">
-            <bean id="laptop" class="org.example.xml.Laptop" primary="true" />
+            <bean id="laptop" class="org.example.xmlBased.Laptop" primary="true" />
         </property>
 
         <!-- This constructor tag is used if value is to be passed through param constructor in the 'Alien' bean (class). -->
@@ -18,10 +18,10 @@
 <!--        <constructor-arg index="2" ref="laptop" />-->
     </bean>
 
-<!--    <bean id="laptop" class="org.example.xml.Laptop" primary="true" >-->
+<!--    <bean id="laptop" class="org.example.xmlBased.Laptop" primary="true" >-->
 <!--    </bean>-->
 
-<!--    <bean id="desktop" class="org.example.xml.Desktop">-->
+<!--    <bean id="desktop" class="org.example.xmlBased.Desktop">-->
 <!--    </bean>-->
 
 </beans>

@@ -1,4 +1,4 @@
-package org.example.xml;
+package org.example.xmlBased;
 
 public class Laptop implements Computer {
     public Laptop() {

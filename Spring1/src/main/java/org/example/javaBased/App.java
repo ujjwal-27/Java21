@@ -1,6 +1,6 @@
-package org.example;
+package org.example.javaBased;
 
-import org.example.config.AppConfig;
+import org.example.javaBased.config.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -9,5 +9,6 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); // creates and initializes Spring IoC container
 
         Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
+        desktop.compile();
     }
 }

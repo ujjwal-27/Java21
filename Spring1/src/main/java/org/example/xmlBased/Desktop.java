@@ -1,4 +1,4 @@
-package org.example.xml;
+package org.example.xmlBased;
 
 public class Desktop implements Computer {
     @Override
