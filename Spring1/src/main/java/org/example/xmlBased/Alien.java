@@ -1,4 +1,4 @@
-package org.example.xml;
+package org.example.xmlBased;
 
 public class Alien {
     private int age;
