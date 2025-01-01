@@ -9,5 +9,6 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); // creates and initializes Spring IoC container
 
         Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
+        desktop.compile();
     }
 }
