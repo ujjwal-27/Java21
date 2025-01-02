@@ -14,7 +14,10 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
     @Bean
     public Alien alien() {
-        return new Alien();
+        Alien obj = new Alien();
+        obj.setAge(27);
+
+        return obj;
     }
 
     /**
