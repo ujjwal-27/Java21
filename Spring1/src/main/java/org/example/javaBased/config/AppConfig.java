@@ -16,7 +16,8 @@ public class AppConfig {
     public Alien alien() {
         Alien obj = new Alien();
         obj.setAge(27);
-
+        obj.setComputer(desktop());
+        
         return obj;
     }
 
