@@ -1,5 +1,6 @@
 package org.example.javaBased.config;
 
+import org.example.javaBased.Alien;
 import org.example.javaBased.Desktop;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +12,11 @@ import org.springframework.context.annotation.Scope;
  */
 @Configuration
 public class AppConfig {
+    @Bean
+    public Alien alien() {
+        return new Alien();
+    }
+
     /**
      * Bean name:
      * By default, the method's name is the Bean name.
