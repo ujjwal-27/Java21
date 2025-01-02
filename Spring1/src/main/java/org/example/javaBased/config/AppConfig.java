@@ -22,7 +22,7 @@ public class AppConfig {
      */
 //    @Bean("imac")
     @Bean()
-    @Scope("prototype")
+//    @Scope("prototype")
     public Desktop desktop() {
         return new Desktop();
     }
