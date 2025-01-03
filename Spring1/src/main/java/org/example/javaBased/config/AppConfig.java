@@ -26,11 +26,12 @@ public class AppConfig {
      * Here, we have two beans: Desktop and Laptop which represents Computer.
      * In this situation, we need to specify which bean to use.
      * There are two ways: using @Primary annotation on Desktop or Laptop bean. Or parsing @Qualifier("bean_name") annotation through alien bean.
+     * Using both will prioritize @Qualifier annotation over @Primary.
      * @param computer Computer object
      * @return Alien object
      */
     @Bean
-    public Alien alien(Computer computer) {
+    public Alien alien(@Qualifier("desktop") Computer computer) {
         Alien obj = new Alien();
         obj.setAge(27);
         obj.setComputer(computer);
