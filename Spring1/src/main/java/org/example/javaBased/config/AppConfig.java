@@ -1,6 +1,9 @@
 package org.example.javaBased.config;
 
+import org.example.javaBased.Alien;
+import org.example.javaBased.Computer;
 import org.example.javaBased.Desktop;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -12,6 +15,24 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
     /**
+     * Autowire:
+     * The 'computer' reference variable in the parameter means that Alien bean is depended on Computer.
+     * Spring will ask the container to look for computer object. For now, we have 'desktop' bean which is a computer object since the 'class Desktop implements Computer interface'.
+     * Hence, it will parse the desktop object. This phenomenon is known as autowiring.
+     * @param computer Computer object
+     * @return Alien object
+     */
+    @Bean
+    public Alien alien(@Autowired Computer computer) {
+        Alien obj = new Alien();
+        obj.setAge(27);
+        obj.setComputer(computer);
+//        obj.setComputer(desktop()); // This is tightly coupled. Meaning, it would pass desktop in every execution, and won't be able to pass other bean like Laptop.
+
+        return obj;
+    }
+
+    /**
      * Bean name:
      * By default, the method's name is the Bean name.
      * But, a bean can be named manually by parsing the required name through the parameter of @Bean annotation.
@@ -22,7 +43,7 @@ public class AppConfig {
      */
 //    @Bean("imac")
     @Bean()
-    @Scope("prototype")
+//    @Scope("prototype")
     public Desktop desktop() {
         return new Desktop();
     }

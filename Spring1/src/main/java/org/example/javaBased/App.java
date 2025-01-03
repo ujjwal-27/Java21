@@ -8,10 +8,14 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class); // creates and initializes Spring IoC container
 
-        Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
-        desktop.compile();
+        Alien alien = context.getBean(Alien.class);
+        System.out.println(alien.getAge());
+        alien.code();
 
-        Desktop desktop1 = context.getBean(Desktop.class); // invoking Desktop bean
-        desktop.compile();
+//        Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
+//        desktop.compile();
+//
+//        Desktop desktop1 = context.getBean(Desktop.class); // invoking Desktop bean
+//        desktop.compile();
     }
 }
