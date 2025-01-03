@@ -13,7 +13,7 @@ public class Alien {
     private Computer computer;
 
     public Alien() {
-//        System.out.println("This is alien");
+        System.out.println("Alien object created");
     }
 
 //    public Alien(int age, int salary, Laptop lap) {
