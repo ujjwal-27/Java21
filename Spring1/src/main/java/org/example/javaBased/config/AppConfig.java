@@ -16,10 +16,14 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
     /**
-     * Autowire:
+     * -- Autowire:
      * The 'computer' reference variable in the parameter means that Alien bean is depended on Computer.
      * Spring will ask the container to look for computer object. For now, we have 'desktop' bean which is a computer object since the 'class Desktop implements Computer interface'.
      * Hence, it will parse the desktop object. This phenomenon is known as autowiring.
+     * -- Autowiring with two beans of same property:
+     * Here, we have two beans: Desktop and Laptop which represents Computer.
+     * In this situation, we need to specify which bean to use.
+     * There are two ways: using @Primary annotation on Desktop or Laptop bean. Or parsing @Qualifier("bean_name") annotation through alien bean.
      * @param computer Computer object
      * @return Alien object
      */
