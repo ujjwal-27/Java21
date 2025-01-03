@@ -3,6 +3,7 @@ package org.example.javaBased.config;
 import org.example.javaBased.Alien;
 import org.example.javaBased.Computer;
 import org.example.javaBased.Desktop;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -22,7 +23,7 @@ public class AppConfig {
      * @return Alien object
      */
     @Bean
-    public Alien alien(Computer computer) {
+    public Alien alien(@Autowired Computer computer) {
         Alien obj = new Alien();
         obj.setAge(27);
         obj.setComputer(computer);
