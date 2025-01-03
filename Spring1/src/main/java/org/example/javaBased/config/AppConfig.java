@@ -3,6 +3,7 @@ package org.example.javaBased.config;
 import org.example.javaBased.Alien;
 import org.example.javaBased.Computer;
 import org.example.javaBased.Desktop;
+import org.example.javaBased.Laptop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -46,5 +47,10 @@ public class AppConfig {
 //    @Scope("prototype")
     public Desktop desktop() {
         return new Desktop();
+    }
+
+    @Bean
+    public Laptop laptop() {
+        return new Laptop();
     }
 }
