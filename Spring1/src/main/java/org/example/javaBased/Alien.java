@@ -1,6 +1,10 @@
 package org.example.javaBased;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+
+import java.beans.ConstructorProperties;
 
 /**
  * The @Component annotation determines that the class is Spring-managed component, and automatically registers the class as bean.
@@ -16,11 +20,11 @@ public class Alien {
         System.out.println("Alien object created");
     }
 
-//    public Alien(int age, int salary, Laptop lap) {
+//    public Alien(int age, int salary, Computer computer) {
 //        System.out.println("Alien param constructor called");
 //        this.age = age;
 //        this.salary = salary;
-//        this.lap = lap;
+//        this.computer = computer;
 //    }
 
     public void code() {
@@ -43,6 +47,8 @@ public class Alien {
         this.age = age;
     }
 
+    @Autowired
+    @Qualifier("laptop")
     public void setComputer(Computer computer) {
         this.computer = computer;
     }
