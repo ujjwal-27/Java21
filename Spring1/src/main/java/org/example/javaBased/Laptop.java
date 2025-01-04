@@ -2,7 +2,7 @@ package org.example.javaBased;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("imac")
 public class Laptop implements Computer {
     public Laptop() {
         System.out.println("Laptop object created");
