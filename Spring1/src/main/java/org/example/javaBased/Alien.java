@@ -2,9 +2,8 @@ package org.example.javaBased;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
-import java.beans.ConstructorProperties;
 
 /**
  * The @Component annotation determines that the class is Spring-managed component, and automatically registers the class as bean.
