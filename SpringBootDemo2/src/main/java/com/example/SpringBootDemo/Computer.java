@@ -1,5 +1,5 @@
 package com.example.SpringBootDemo;
 
 public interface Computer {
-    public void code();
+    public void compile();
 }

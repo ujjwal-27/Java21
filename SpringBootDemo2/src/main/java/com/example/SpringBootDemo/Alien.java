@@ -20,5 +20,7 @@ public class Alien {
         this.computer = computer;
     }
 
-
+    public void code() {
+        System.out.println("Coding");
+    }
 }
