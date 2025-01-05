@@ -10,6 +10,7 @@ public class App {
 
         Alien alien = context.getBean(Alien.class);
         System.out.println(alien.getAge());
+        System.out.println(alien.getSalary());
         alien.code();
 
         Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
