@@ -10,12 +10,13 @@ public class App {
 
         Alien alien = context.getBean(Alien.class);
         System.out.println(alien.getAge());
+        System.out.println(alien.getSalary());
         alien.code();
 
-//        Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
-//        desktop.compile();
-//
-//        Desktop desktop1 = context.getBean(Desktop.class); // invoking Desktop bean
-//        desktop.compile();
+        Desktop desktop = context.getBean(Desktop.class); // invoking Desktop bean
+        desktop.compile();
+
+        Desktop desktop1 = context.getBean(Desktop.class); // invoking Desktop bean
+        desktop.compile();
     }
 }

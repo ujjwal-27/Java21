@@ -2,9 +2,9 @@ package org.example.javaBased;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
-import java.beans.ConstructorProperties;
 
 /**
  * The @Component annotation determines that the class is Spring-managed component, and automatically registers the class as bean.
@@ -12,7 +12,9 @@ import java.beans.ConstructorProperties;
  */
 @Component
 public class Alien {
+    @Value("27")
     private int age;
+    @Value("100000000")
     private int salary;
     private Computer computer;
 
