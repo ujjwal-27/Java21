@@ -48,7 +48,6 @@ public class Alien {
     }
 
     @Autowired
-    @Qualifier("imac")
     public void setComputer(Computer computer) {
         this.computer = computer;
     }
