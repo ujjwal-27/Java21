@@ -19,6 +19,6 @@ public class StudentService {
     }
 
     public void addStudent(Student student) {
-        System.out.println("Student " + student.getName() + " added.");
+        studentRepository.save(student);
     }
 }
