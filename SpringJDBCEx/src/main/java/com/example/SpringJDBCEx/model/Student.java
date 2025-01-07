@@ -24,11 +24,11 @@ public class Student {
         this.marks = marks;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setRollNo(int rollNo) {
         this.rollNo = rollNo;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
