@@ -14,7 +14,9 @@ public class StudentRepository {
     }
 
     public void save(Student student) {
-        System.out.println("Student " + student.getName() + " added.");
+        String sql = "insert into student (rollNo, name, marks) values (?, ?, ?)";
+        int rows = jdbc.update(sql, student.getRollNo(), student.getName(), student.getMarks());
+        System.out.println(rows + " affected.");
     }
 
     @Autowired
