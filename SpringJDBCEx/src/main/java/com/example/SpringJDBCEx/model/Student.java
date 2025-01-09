@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Student {
     private int marks;
     private String name;
-    private int rollNo;
+    private int roll_no;
 
     public int getMarks() {
         return marks;
@@ -19,7 +19,7 @@ public class Student {
     }
 
     public int getRollNo() {
-        return rollNo;
+        return roll_no;
     }
 
     public void setMarks(int marks) {
@@ -27,7 +27,7 @@ public class Student {
     }
 
     public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
+        this.roll_no = rollNo;
     }
 
     public void setName(String name) {
