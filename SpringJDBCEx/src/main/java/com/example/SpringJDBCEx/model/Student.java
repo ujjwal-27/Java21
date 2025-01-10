@@ -33,4 +33,13 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "marks=" + marks +
+                ", name='" + name + '\'' +
+                ", roll_no=" + roll_no +
+                '}';
+    }
 }
