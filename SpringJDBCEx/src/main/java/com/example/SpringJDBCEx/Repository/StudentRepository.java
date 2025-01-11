@@ -36,19 +36,14 @@ public class StudentRepository {
     public List<Student> findAll() {
         String sql = "Select * from student";
 
-        RowMapper<Student> rowMapper = new RowMapper<Student>() {
-            @Override
-            public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Student student = new Student();
+        return jdbc.query(sql, (rs, rowNum) -> {
+            Student student = new Student();
 
-                student.setRollNo(rs.getInt("roll_no"));
-                student.setName(rs.getString("name"));
-                student.setMarks(rs.getInt("marks"));
+            student.setRollNo(rs.getInt("roll_no"));
+            student.setName(rs.getString("name"));
+            student.setMarks(rs.getInt("marks"));
 
-                return student;
-            }
-        };
-
-        return jdbc.query(sql, rowMapper);
+            return student;
+        });
     }
 }
