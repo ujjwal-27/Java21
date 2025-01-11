@@ -33,6 +33,16 @@ public class StudentRepository {
         this.jdbc = jdbc;
     }
 
+    /**
+     * The method 'jdbc.query()' takes two arguments: SQL query and RowMapper.
+     * The second parameter with the RowMapper is using simplified lambda expression:
+     * - The RowMapper is a functional interface whose method: 'mapRow' is being overridden.
+     * - The 'mapRow' method has two parameters: 'ResultSet' and 'rowNum'.
+     * - The 'ResultSet' gives each row of data from student table.
+     * - These data are being added to Student object, and returned.
+     * The method 'jdbc.query()' returns List of any object. Here, the object is Student.
+     * @return List of students
+     */
     public List<Student> findAll() {
         String sql = "Select * from student";
 
