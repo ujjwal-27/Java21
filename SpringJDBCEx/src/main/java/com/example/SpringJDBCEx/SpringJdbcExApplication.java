@@ -19,9 +19,11 @@ public class SpringJdbcExApplication {
 		student.setName("Ujjwal");
 		student.setRollNo(104);
 
+		// Invoke StudentService bean, and addStudent method from the service.
 		StudentService studentService = context.getBean(StudentService.class);
 		studentService.addStudent(student);
 
+		// Display list of all students from DB table
 		List<Student> students = studentService.getStudents();
 		System.out.println(students);
 	}
