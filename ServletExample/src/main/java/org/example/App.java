@@ -20,6 +20,13 @@ public class App
         // explicitly setting address as 'localhost'
         tomcat.getConnector().setProperty("address", "localhost");
 
+        // Add a web application context
+        Context context = tomcat.addContext("", null);
+
+        // Register the servlet 'HelloServlet' and map it to a URL
+        Tomcat.addServlet(context, "helloServlet", new HelloServlet());
+        context.addServletMappingDecoded("/hello", "helloServlet");
+
         // Start the Tomcat server
         tomcat.start();
 
