@@ -30,11 +30,27 @@ public class HomeController {
      * @param session Http session
      * @return View page displaying sum of two integers.
      */
+//    @RequestMapping("/add")
+//    public String add(HttpServletRequest req, HttpSession session) {
+//        // getting integers 'num1' and 'num2' as query parameter.
+//        int num1 = Integer.parseInt(req.getParameter("num1"));
+//        int num2 = Integer.parseInt(req.getParameter("num2"));
+//        int result = num1 + num2;
+//
+//        session.setAttribute("result", result); // setting result in session named as 'result'
+//
+//        return "result.jsp";
+//    }
+
+    /**
+     * Here, Spring approach is implemented to get values from query param.
+     * @param num1 [Integer] The variable name must exactly match with query parameter
+     * @param num2 [Integer] The variable name must exactly match with query parameter
+     * @param session Http Session
+     * @return View page displaying sum of two integers.
+     */
     @RequestMapping("/add")
-    public String add(HttpServletRequest req, HttpSession session) {
-        // getting integers 'num1' and 'num2' as query parameter.
-        int num1 = Integer.parseInt(req.getParameter("num1"));
-        int num2 = Integer.parseInt(req.getParameter("num2"));
+    public String add(int num1, int num2, HttpSession session) {
         int result = num1 + num2;
 
         session.setAttribute("result", result); // setting result in session named as 'result'
