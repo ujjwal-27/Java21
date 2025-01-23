@@ -20,4 +20,10 @@ public class HomeController {
         System.out.println("Home controller called");
         return "index.jsp";
     }
+
+    @RequestMapping("/add")
+    public String add() {
+//        System.out.println("add invoked");
+        return "result.jsp";
+    }
 }
