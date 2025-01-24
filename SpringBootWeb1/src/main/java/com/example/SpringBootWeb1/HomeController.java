@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * In spring boot, always use @Controller annotation for a controller class
@@ -28,16 +29,17 @@ public class HomeController {
      * Here, Spring approach is implemented to get values directly from query param without using HttpServlet.
      * @param num1 [Integer] The variable name must exactly match with query parameter
      * @param num2 [Integer] The variable name must exactly match with query parameter
-     * @param model [Model] It is used for transferring data between Controller and JSP view page. It is a better alternative for Http session
+     * @param mv [ModelAndView] The 'ModelAndView' class does the work of both model (setting data for view), and view (invoking the view page where the data is to be sent)
      * @return View page displaying sum of two integers.
      */
     @RequestMapping("/add")
-    public String add(int num1, int num2, Model model) {
+    public ModelAndView add(int num1, int num2, ModelAndView mv) {
         int result = num1 + num2;
 
-        model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
+        mv.addObject("result", result);  // setting 'result' as a ModelView object to transfer it to view page.
+        mv.setViewName("result"); // invoking view page
 
-        return "result";
+        return mv;
     }
     
     /**
