@@ -34,9 +34,11 @@ public class HomeController {
      */
     @RequestMapping("/add")
     public ModelAndView add(int num1, int num2, ModelAndView mv) {
-        int result = num1 + num2;
+        int sum = num1 + num2;
 
-        mv.addObject("result", result);  // setting 'result' as a ModelView object to transfer it to view page.
+        // setting 'result' as a ModelView object to transfer it to view page.
+        // here, the attributeName 'sum' (first param) is used in view page to display data, and the variable 'sum' (second param) is the actual value being passed.
+        mv.addObject("sum", sum);
         mv.setViewName("result"); // invoking view page
 
         return mv;
