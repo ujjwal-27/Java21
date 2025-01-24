@@ -54,7 +54,7 @@ public class HomeController {
     public String add(int num1, int num2, Model model) {
         int result = num1 + num2;
 
-        model.addAttribute("result", result); // setting result in session named as 'result'
+        model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
 
         return "result.jsp";
     }
