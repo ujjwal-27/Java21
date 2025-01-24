@@ -43,7 +43,7 @@ public class HomeController {
 //    }
 
     /**
-     * Here, Spring approach is implemented to get values from query param.
+     * Here, Spring approach is implemented to get values directly from query param without using HttpServlet.
      * @param num1 [Integer] The variable name must exactly match with query parameter
      * @param num2 [Integer] The variable name must exactly match with query parameter
      * @param session Http Session
