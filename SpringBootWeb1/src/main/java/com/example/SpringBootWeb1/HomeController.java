@@ -3,6 +3,7 @@ package com.example.SpringBootWeb1;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -46,14 +47,14 @@ public class HomeController {
      * Here, Spring approach is implemented to get values directly from query param without using HttpServlet.
      * @param num1 [Integer] The variable name must exactly match with query parameter
      * @param num2 [Integer] The variable name must exactly match with query parameter
-     * @param session Http Session
+     * @param model [Model] It is used for transferring data between Controller and JSP view page. It is a better alternative for Http session
      * @return View page displaying sum of two integers.
      */
     @RequestMapping("/add")
-    public String add(int num1, int num2, HttpSession session) {
+    public String add(int num1, int num2, Model model) {
         int result = num1 + num2;
 
-        session.setAttribute("result", result); // setting result in session named as 'result'
+        model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
 
         return "result.jsp";
     }
