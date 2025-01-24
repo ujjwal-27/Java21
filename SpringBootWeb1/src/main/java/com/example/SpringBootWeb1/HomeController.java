@@ -21,7 +21,7 @@ public class HomeController {
      */
     @RequestMapping({"/","/home"})
     public String home() {
-        return "index.jsp"; // return view page
+        return "index"; // return view page
     }
 
 
@@ -56,6 +56,6 @@ public class HomeController {
 
         model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
 
-        return "result.jsp";
+        return "result";
     }
 }
