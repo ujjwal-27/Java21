@@ -21,10 +21,25 @@ public class HomeController {
      */
     @RequestMapping({"/","/home"})
     public String home() {
-        return "index.jsp"; // return view page
+        return "index"; // return view page
     }
 
+    /**
+     * Here, Spring approach is implemented to get values directly from query param without using HttpServlet.
+     * @param num1 [Integer] The variable name must exactly match with query parameter
+     * @param num2 [Integer] The variable name must exactly match with query parameter
+     * @param model [Model] It is used for transferring data between Controller and JSP view page. It is a better alternative for Http session
+     * @return View page displaying sum of two integers.
+     */
+    @RequestMapping("/add")
+    public String add(int num1, int num2, Model model) {
+        int result = num1 + num2;
 
+        model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
+
+        return "result";
+    }
+    
     /**
      * Here, all the processing is executed using servlet. (This can be done using Spring approach. Check next commit for it.)
      * @param req Getting request from client using servlet (This can be done using Spring approach as well).
@@ -42,20 +57,4 @@ public class HomeController {
 //
 //        return "result.jsp";
 //    }
-
-    /**
-     * Here, Spring approach is implemented to get values directly from query param without using HttpServlet.
-     * @param num1 [Integer] The variable name must exactly match with query parameter
-     * @param num2 [Integer] The variable name must exactly match with query parameter
-     * @param model [Model] It is used for transferring data between Controller and JSP view page. It is a better alternative for Http session
-     * @return View page displaying sum of two integers.
-     */
-    @RequestMapping("/add")
-    public String add(int num1, int num2, Model model) {
-        int result = num1 + num2;
-
-        model.addAttribute("result", result); // setting 'result' as an model attribute to transfer it to jsp view page.
-
-        return "result.jsp";
-    }
 }
