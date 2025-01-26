@@ -2,7 +2,7 @@
 
 <html>
     <body>
-        <h2>Result is: ${ result } </h2>
+        <h2>Result is: ${ sum } </h2>
     </body>
 </html>
 
