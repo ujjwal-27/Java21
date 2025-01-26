@@ -8,10 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProgrammerController {
 
     @RequestMapping("/programmerForm")
-    public ModelAndView programmerForm(ModelAndView mv) {
-        mv.setViewName("programmerForm");
-
-        return mv;
+    public String programmerForm() {
+        return "programmerForm";
     }
 
     /**
