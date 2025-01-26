@@ -13,4 +13,16 @@ public class ProgrammerController {
 
         return mv;
     }
+
+    @RequestMapping("/addProgrammer")
+    public ModelAndView addProgrammer(int pid, String name, ModelAndView mv) {
+        Programmer programmer = new Programmer();
+        programmer.setProgrammerId(pid);
+        programmer.setProgrammerName(name);
+
+        mv.addObject("programmer", programmer);
+        mv.setViewName("programmerResult");
+
+        return mv;
+    }
 }
