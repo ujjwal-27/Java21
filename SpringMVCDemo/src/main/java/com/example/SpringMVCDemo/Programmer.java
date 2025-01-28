@@ -1,4 +1,4 @@
-package com.example.SpringBootWeb1;
+package com.example.SpringMVCDemo;
 
 public class Programmer {
     private int programmerId;
