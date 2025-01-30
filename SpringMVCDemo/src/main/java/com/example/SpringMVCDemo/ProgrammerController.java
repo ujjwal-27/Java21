@@ -19,11 +19,11 @@ public class ProgrammerController {
     }
 
     /**
-     * In this method, instead of accepting data from form through multiple parameters, we are accepting whole programmer model in the form of data.
-     * Note that, for this to work, the name of form field must match with the properties of programmer model.
-     * This is an example of using ModelAttribute.
-     * The parameter can also be written as: (@ModelAttribute("data") Programmer programmer). This is optional, and not really required until we need to change the name of data we are sending.
-     * If the attributeName is set, then that attributeName must be used in view page.
+     * In this method, instead of accepting data from form through multiple parameters, we are accepting whole 'programmer' model in the form of data.
+     * Note that, for this to work, the 'name of form field' must match with the 'properties' of 'programmer' model.
+     * This is an example of using 'ModelAttribute'.
+     * The parameter can also be written as: (@ModelAttribute("data") Programmer programmer). This is optional, and not really required until we need to change the name of data we are sending in the 'view page'.
+     * If the 'attributeName' is set, then that 'attributeName' must be used in 'view page'.
      * @param programmer [Programmer] An object of programmer
      * @return [String] View page: programmerResult
      */
