@@ -13,8 +13,9 @@ public class ProgrammerController {
         return "Java";
     }
 
-    @RequestMapping("/programmerForm")
+    @RequestMapping("/")
     public String programmerForm() {
+//    	System.out.println("programmer form called");
         return "programmerForm";
     }
 
