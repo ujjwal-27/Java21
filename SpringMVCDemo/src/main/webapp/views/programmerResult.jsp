@@ -1,4 +1,4 @@
-<%@page language="java" isELIgnored="false" %>
+<%@page language="java" %>
 
 <html>
     <body>
