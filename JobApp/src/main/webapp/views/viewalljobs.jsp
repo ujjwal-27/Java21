@@ -40,7 +40,7 @@
     <h2 class="mb-4 text-center font-weight-bold">Job Post List</h2>
 
     <div class="row row-cols-2">
-        <ab:forEach var="jobPost" items="${jobPosts}">
+        <c:forEach var="jobPost" items="${jobPosts}">
             <div class="col mb-4">
                 <div class="card border-dark bg-dark text-white">
                     <div class="card-body">
@@ -60,9 +60,9 @@
                         <p class="card-text">
                             <strong>Tech Stack Required:</strong>
                             <ul>
-                                <ab:forEach var="tech" items="${jobPost.postTechStack}">
+                                <c:forEach var="tech" items="${jobPost.postTechStack}">
                                     <li>${tech}</li>
-                                </ab:forEach>
+                                </c:forEach>
                             </ul>
                         </p>
                     </div>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-        </ab:forEach>
+        </c:forEach>
     </div>
 </div>
 
