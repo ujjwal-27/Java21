@@ -61,7 +61,7 @@
 						<div class="card-body">
 							<h2 class="mb-3 text-center fs-3 font-weight-bold">Post a new
 								Job</h2>
-							<form:form action="handleForm" method="post" modelAttribute="jobPost">
+							<form action="handleForm" method="post">
 								<div class="mb-1">
 									<label for="postId" class="form-label">Post ID</label> <input
 										type="text" class="form-control" id="postId" name="postId"
@@ -213,7 +213,7 @@
 								</div>
 
 								<button type="submit" class="btn btn-primary">Submit</button>
-							</form:form>
+							</form>
 						</div>
 					</div>
 				</div>
