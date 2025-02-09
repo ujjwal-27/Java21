@@ -1,5 +1,6 @@
 package com.example.JobApp;
 
+import com.example.JobApp.model.JobPost;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ public class JobController {
     }
 
     @PostMapping("handleForm")
-    public String handleForm() {
+    public String handleForm(JobPost jobPost) {
         return "success";
     }
 }
