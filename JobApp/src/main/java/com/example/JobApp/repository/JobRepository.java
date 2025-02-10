@@ -14,4 +14,12 @@ public class JobRepository {
             new JobPost(4, "Network Engineer", "Design and implement computer networks for efficient data communication", 5, List.of("Networking", "Cisco", "Routing", "Switching")),
             new JobPost(5, "Mobile App Developer", "Experience in mobile app development for iOS and Android", 3, List.of("iOS Development", "Android Development", "Mobile App"))
     ));
+
+    public List<JobPost> getAllJobs() {
+        return jobs;
+    }
+
+    public void addJob(JobPost job) {
+        jobs.add(job);
+    }
 }
