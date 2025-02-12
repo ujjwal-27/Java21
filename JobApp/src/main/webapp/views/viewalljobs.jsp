@@ -1,9 +1,7 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ taglib prefix="ab" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false"%>
-<%@ page import="java.util.List" %>
-<%@ page import="com.telusko.JobApp.model.JobPost" %>
-<%@ page import="com.telusko.JobApp.repo.JobRepo" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +31,6 @@
         </div>
     </div>
 </nav>
-
-<ab:set var="jobPosts" value="${jobPosts}" />
 
 <div class="container mt-5">
     <h2 class="mb-4 text-center font-weight-bold">Job Post List</h2>
