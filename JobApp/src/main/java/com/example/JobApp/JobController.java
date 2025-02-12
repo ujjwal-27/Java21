@@ -30,4 +30,9 @@ public class JobController {
         jobService.addJob(jobPost);
         return "success";
     }
+
+    @GetMapping("viewalljobs")
+    public String viewJobs() {
+        return "viewalljobs";
+    }
 }
