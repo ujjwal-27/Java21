@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class JobController {
     @Autowired
@@ -32,7 +34,9 @@ public class JobController {
     }
 
     @GetMapping("viewalljobs")
-    public String viewJobs() {
+    public String viewJobs(Model model) {
+        List<JobPost> jobs = jobService.getAllJobs();
+        model.addAttribute("jobPosts", jobs);
         return "viewalljobs";
     }
 }
