@@ -17,6 +17,12 @@ public class JobRestController {
     @Autowired
     private JobService jobService;
 
+    /**
+     * This method simply implements 'PostMapping' annotation.
+     * The data received from request body in the method's parameter must be implemented with RequestBody annotation.
+     * @param jobPost [JobPost] Job post data from request body.
+     * @return [JobPost] Return recently added job post.
+     */
     @PostMapping("jobPost")
     public JobPost addJobPost(@RequestBody JobPost jobPost) {
         jobService.addJob(jobPost);
@@ -29,6 +35,11 @@ public class JobRestController {
         return jobService.getAllJobs();
     }
 
+    /**
+     *
+     * @param postId [int] ID of job post to return.
+     * @return [JobPost] Return detail of a job post.
+     */
     @GetMapping("jobPost/{postId}")
     public JobPost getJob(@PathVariable("postId") int postId) {
         System.out.println(postId);
