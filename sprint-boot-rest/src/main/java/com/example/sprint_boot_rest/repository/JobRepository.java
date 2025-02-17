@@ -45,4 +45,12 @@ public class JobRepository {
             }
         }
     }
+
+    public void deleteJob(int postId) {
+        for (int i = 0; i < jobs.size(); i++) {
+            if (jobs.get(i).getPostId() == postId) {
+                jobs.remove(i);
+            }
+        }
+    }
 }
