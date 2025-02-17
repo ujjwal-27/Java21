@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 @Repository
@@ -33,5 +34,43 @@ public class JobRepository {
         }
 
         return null;
+    }
+
+    public void updateJob(JobPost jobPost) {
+        for (JobPost job: jobs) {
+            if (job.getPostId() == jobPost.getPostId()) {
+                job.setPostProfile(jobPost.getPostProfile());
+                job.setPostDesc(jobPost.getPostDesc());
+                job.setReqExperience(jobPost.getReqExperience());
+                job.setPostTechStack(jobPost.getPostTechStack());
+            }
+        }
+    }
+
+    /**
+     * APPROACH - 1: Here, removeIf() method use lambda approach to remove job from the list. (Recommended for removing element while iterating through list)
+     * APPROACH - 2: Here, 'Iterator' allows safe traversal and modification during iteration.
+     * APPROACH - 3: Here, Using general for-loop.
+     * @param postId [int] ID of jobPost to delete
+     */
+    public void deleteJob(int postId) {
+        // APPROACH - 1
+        jobs.removeIf(job -> job.getPostId() == postId);
+
+        // APPROACH - 2
+//        Iterator<JobPost> jobPostIterator = jobs.iterator();
+//
+//        while (jobPostIterator.hasNext()) {
+//            if (jobPostIterator.next().getPostId() == postId) {
+//                jobPostIterator.remove();
+//            }
+//        }
+
+        // APPROACH - 3
+//        for (int i = 0; i < jobs.size(); i++) {
+//            if (jobs.get(i).getPostId() == postId) {
+//                jobs.remove(i);
+//            }
+//        }
     }
 }

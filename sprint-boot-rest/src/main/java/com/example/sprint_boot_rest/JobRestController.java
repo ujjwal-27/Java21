@@ -45,4 +45,16 @@ public class JobRestController {
         System.out.println(postId);
         return jobService.getJob(postId);
     }
+
+    @PutMapping("jobPost")
+    public JobPost updateJob(@RequestBody JobPost jobPost) {
+        jobService.updateJob(jobPost);
+
+        return jobService.getJob(jobPost.getPostId());
+    }
+
+    @DeleteMapping("jobPost/{postId}")
+    public void deleteJob(@PathVariable("postId") int postId) {
+        jobService.deleteJob(postId);
+    }
 }
