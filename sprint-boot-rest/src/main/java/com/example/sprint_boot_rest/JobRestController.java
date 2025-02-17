@@ -37,7 +37,7 @@ public class JobRestController {
 
     /**
      *
-     * @param postId [int] ID of job post to return.
+     * @param postId [int] ID of job post to return. In parameter, annotation PathVariable is implemented to indicate that postId is sent from URI.
      * @return [JobPost] Return detail of a job post.
      */
     @GetMapping("jobPost/{postId}")
