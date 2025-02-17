@@ -23,7 +23,6 @@ public class JobRepository {
 
     public void addJob(JobPost job) {
         jobs.add(job);
-        System.out.println(jobs);
     }
 
     public JobPost getJob(int postId) {
