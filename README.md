@@ -13,5 +13,8 @@ This Udemy course covers various areas of Java:
 9. SpringJDBCEx (Section 10)
 10. ServletExample (Section 11)
 11. SpringBootWeb1 (Section 12)
+12. SpringMVCDemo (Sectiopn 13)
+13. JobApp and JOBPORTAL-1 (Section 14)
+14. spring-boot-rest (Section 15)
 
 This course is carried out using current LTS version of JAVA i.e. 21. 
