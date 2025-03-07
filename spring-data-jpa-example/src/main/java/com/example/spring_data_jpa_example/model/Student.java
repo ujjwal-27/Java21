@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-@Entity
+@Entity // Inorder to create table based on this class using Spring Data JPA, the model class must be declared as entity using this annotation.
 public class Student {
-    @Id
+    @Id // This annotation determines the primary key of the table 'student'
     private int roll_no;
-    private int marks;
     private String name;
+    private int marks;
 
     public int getMarks() {
         return marks;

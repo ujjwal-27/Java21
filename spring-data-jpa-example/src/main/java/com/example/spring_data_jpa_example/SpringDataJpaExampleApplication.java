@@ -8,7 +8,10 @@ import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpringDataJpaExampleApplication {
-
+	/**
+	 * Here, the class objects are created just to show the working of Spring Data JPA. Initially, db table is created based on model class, and data is inserted in the table using JpaRepository interface.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringDataJpaExampleApplication.class, args);
 
