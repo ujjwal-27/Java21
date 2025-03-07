@@ -1,14 +1,18 @@
 package com.example.spring_data_jpa_example.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
+@Entity
 public class Student {
+    @Id
+    private int roll_no;
     private int marks;
     private String name;
-    private int roll_no;
 
     public int getMarks() {
         return marks;
