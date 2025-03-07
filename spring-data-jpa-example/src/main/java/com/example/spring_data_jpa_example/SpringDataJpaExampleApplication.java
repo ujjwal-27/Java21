@@ -34,6 +34,10 @@ public class SpringDataJpaExampleApplication {
 		s3.setMarks(75);
 
 		studentRepository.save(s1);
+		studentRepository.save(s2);
+		studentRepository.save(s3);
+
+		System.out.println(studentRepository.findAll());
 	}
 
 }
