@@ -14,9 +14,10 @@ import java.util.List;
  */
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
+    // Here, Spring JPA 'Derived Query' is used which automatically generates query behind the scene.
+    // The methods are specifically derived from the 'class properties' or 'field name'.
+    // It follows syntax like: findBy<FieldName>, findBy<FieldName>GraterThan.
     List<Student> findByName(String name);
-
     List<Student> findByMarks(int marks);
-
     List<Student> findByMarksGreaterThan(int marks);
 }
