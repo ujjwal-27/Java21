@@ -46,10 +46,22 @@ public class SpringDataJpaExampleApplication {
 //		Optional<Student> student = studentRepository.findById(101); // findById() method returns Optional<T> type. Optional basically handles null value.
 //		System.out.println(student.orElse(new Student())); // If the data is found, it will return the Student, else it will return empty Student object.
 
-		// Spring JPA Derived Query - findBy...
-		System.out.println(studentRepository.findByName("Ujjwal"));
-		System.out.println(studentRepository.findByMarks(87));
-		System.out.println(studentRepository.findByMarksGreaterThan(80));
+		// Spring JPA Derived Query - findBy<FieldName>, findBy<FieldName>GreaterThan
+//		System.out.println(studentRepository.findByName("Ujjwal"));
+//		System.out.println(studentRepository.findByMarks(87));
+//		System.out.println(studentRepository.findByMarksGreaterThan(80));
+
+		// Update - It is also executed through save() method based on primary key i.e. rollNo.
+		s2.setRollNo(102);
+		s2.setName("Jason");
+		s2.setMarks(85);
+		studentRepository.save(s2);
+
+		// Delete
+		s3.setRollNo(103);
+//		s3.setName("Jane");
+//		s3.setMarks(75);
+		studentRepository.delete(s3);
 	}
 
 }
