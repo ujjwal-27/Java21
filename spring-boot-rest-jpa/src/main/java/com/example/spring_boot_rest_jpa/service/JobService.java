@@ -45,4 +45,8 @@ public class JobService {
 
         jobRepository.saveAll(jobs);
     }
+
+    public List<JobPost> searchByKeyword(String keyword) {
+        return jobRepository.findByPostProfileContainingOrPostDescContaining(keyword, keyword);
+    }
 }
