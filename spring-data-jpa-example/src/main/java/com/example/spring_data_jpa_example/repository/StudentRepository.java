@@ -4,6 +4,8 @@ import com.example.spring_data_jpa_example.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Use of 'Spring Boot Started Data JPA' library
  * Here, StudentRepository is an interface, not a class.
@@ -12,5 +14,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
+    List<Student> findByName(String name);
 
+    List<Student> findByMarks(int marks);
+
+    List<Student> findByMarksGreaterThan(int marks);
 }
