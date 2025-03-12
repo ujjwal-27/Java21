@@ -43,8 +43,14 @@ public class ProductController {
         }
     }
 
+    /**
+     *
+     * @param product Product details except image data.
+     * @param image Here, in 'RequestPart' annotation, the 'imageFile' is key mentioned in JSON data, sent from the client. Instead, we can simply mention '@RequestPart MultipartFile imageFile'. Matching the variable name with the key will also work.
+     * @return Saved product detail or error message.
+     */
     @PostMapping("product")
-    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile image) {
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart("imageFile") MultipartFile image) {
         try {
             Product savedProduct = productService.addProduct(product, image);
 
