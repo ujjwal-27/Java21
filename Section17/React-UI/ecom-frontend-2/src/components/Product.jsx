@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "../axios";
 
 const Product = () => {
   const { id } = useParams();
-const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -27,7 +27,7 @@ const [product, setProduct] = useState(null);
   if (!product) {
     return (
       <h2 className="text-center" style={{ padding: "10rem" }}>
-        Loading...
+        Product not found.
       </h2>
     );
   }
@@ -66,11 +66,11 @@ const [product, setProduct] = useState(null);
             <button
               className="btn btn-primary"
               type="button"
-          
+
             >
               Update
             </button>
-        
+
             <button
               className="btn btn-primary"
               type="button"
