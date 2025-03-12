@@ -27,7 +27,7 @@ const Product = () => {
   if (!product) {
     return (
       <h2 className="text-center" style={{ padding: "10rem" }}>
-        Product not found.
+        Loading...
       </h2>
     );
   }
