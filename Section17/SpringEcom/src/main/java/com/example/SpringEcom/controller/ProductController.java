@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,6 +41,23 @@ public class ProductController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
 
+    /**
+     * The return type of this method is ResponseEntity. The question mark '?' in angular bracket represents wildcard, meaning the method can return detail of saved product, or the error message.
+     * @param product Product details except image data.
+     * @param image Here, in 'RequestPart' annotation, the 'imageFile' is key mentioned in JSON data, sent from the client. Instead, we can simply mention '@RequestPart MultipartFile imageFile'. Matching the variable name with the key will also work.
+     * @return Saved product detail or error message.
+     */
+    @PostMapping("product")
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart("imageFile") MultipartFile image) {
+        try {
+            Product savedProduct = productService.addProduct(product, image);
+
+            return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
+
+        } catch (IOException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
