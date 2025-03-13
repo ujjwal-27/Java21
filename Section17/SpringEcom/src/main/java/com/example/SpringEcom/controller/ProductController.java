@@ -43,6 +43,20 @@ public class ProductController {
         }
     }
 
+    @GetMapping("product/{id}/image")
+    public ResponseEntity<byte[]> getImage(@PathVariable int id) {
+        Optional<Product> product = productService.getProductById(id);
+
+//        if (product.isPresent()) {
+//            return new ResponseEntity<>(product.get().getImageData(), HttpStatus.OK);
+//
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+
+        return product.map(value -> new ResponseEntity<>(value.getImageData(), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND)); // optimized approach of above if/else
+    }
+
     /**
      * The return type of this method is ResponseEntity. The question mark '?' in angular bracket represents wildcard, meaning the method can return detail of saved product, or the error message.
      * @param product Product details except image data.
