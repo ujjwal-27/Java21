@@ -44,7 +44,7 @@ public class ProductController {
     }
 
     /**
-     *
+     * The return type of this method is ResponseEntity. The question mark '?' in angular bracket represents wildcard, meaning the method can return detail of saved product, or the error message.
      * @param product Product details except image data.
      * @param image Here, in 'RequestPart' annotation, the 'imageFile' is key mentioned in JSON data, sent from the client. Instead, we can simply mention '@RequestPart MultipartFile imageFile'. Matching the variable name with the key will also work.
      * @return Saved product detail or error message.
