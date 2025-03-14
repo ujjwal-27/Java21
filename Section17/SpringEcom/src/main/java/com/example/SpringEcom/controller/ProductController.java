@@ -86,4 +86,18 @@ public class ProductController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_GATEWAY);
         }
     }
+
+    @DeleteMapping("product/{id}")
+    public ResponseEntity<String> deleteProduct(@PathVariable int id) {
+        Optional<Product> product = productService.getProductById(id);
+
+        if (product.isPresent()) {
+            productService.deleteProduct(id);
+
+            return new ResponseEntity<>("Deleted successfully", HttpStatus.OK);
+
+        } else {
+            return new ResponseEntity<>("Failed to delete product", HttpStatus.NOT_FOUND);
+        }
+    }
 }
