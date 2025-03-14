@@ -66,7 +66,7 @@ public class ProductController {
     @PostMapping("product")
     public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart("imageFile") MultipartFile image) {
         try {
-            Product savedProduct = productService.addProduct(product, image);
+            Product savedProduct = productService.saveProduct(product, image);
 
             return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
 
@@ -78,7 +78,7 @@ public class ProductController {
     @PutMapping("product/{id}")
     public ResponseEntity<?> updateProduct(@PathVariable int id, @RequestPart Product product, @RequestPart MultipartFile imageFile) {
         try {
-            Product updatedProduct = productService.updateProduct(product, imageFile);
+            Product updatedProduct = productService.saveProduct(product, imageFile);
 
             return new ResponseEntity<>(updatedProduct, HttpStatus.CREATED);
 
