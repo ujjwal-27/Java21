@@ -100,4 +100,11 @@ public class ProductController {
             return new ResponseEntity<>("Failed to delete product", HttpStatus.NOT_FOUND);
         }
     }
+
+    @GetMapping("products/search")
+    public ResponseEntity<List<Product>> searchProducts(@RequestParam String keyword) {
+        List<Product> products = productService.searchProduct(keyword);
+        System.out.println("Searching with " + keyword);
+        return new ResponseEntity<>(products, HttpStatus.OK);
+    }
 }
