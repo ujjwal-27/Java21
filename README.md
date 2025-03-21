@@ -16,5 +16,6 @@ This Udemy course covers various areas of Java:
 12. SpringMVCDemo (Sectiopn 13)
 13. JobApp and JOBPORTAL-1 (Section 14)
 14. spring-boot-rest (Section 15)
+15. spring-data-jpa-example and spring-boot-rest-jpa (Section 16)
 
 This course is carried out using current LTS version of JAVA i.e. 21. 
