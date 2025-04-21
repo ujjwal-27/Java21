@@ -15,9 +15,9 @@ public class Main {
 
         System.out.println(s1);
 
-        Configuration config = new Configuration();
-        SessionFactory sessionFactory = config.buildSessionFactory();
-        Session session = sessionFactory.openSession();
+        Configuration config = new Configuration(); // create configuration object to config hibernate session
+        SessionFactory sessionFactory = config.buildSessionFactory(); // invoke buildSessionFactory() method
+        Session session = sessionFactory.openSession(); // open session through session factory
 
         session.save(s1);
     }
