@@ -17,7 +17,7 @@ public class Main {
 
         Configuration cfg = new Configuration(); // create configuration object to config hibernate session
         cfg.addAnnotatedClass(org.example.model.Student.class); // locate the model class with annotation '@Entity'
-        cfg.configure();
+        cfg.configure(); // invokes the xml-configuration file from 'resources/hibernate.cfg.xml'
 
         SessionFactory sessionFactory = cfg.buildSessionFactory(); // invoke buildSessionFactory() method
         Session session = sessionFactory.openSession(); // open session through session factory
