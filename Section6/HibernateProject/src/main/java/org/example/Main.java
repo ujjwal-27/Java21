@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Student s1 = new Student();
 
-        s1.setRollNo(5);
-        s1.setAge(30);
-        s1.setName("Jeff");
+        s1.setRollNo(6);
+        s1.setAge(31);
+        s1.setName("Jessica");
 
         System.out.println(s1);
 
@@ -33,9 +33,9 @@ public class Main {
         session.persist(s1); // inserts data from s1 object to student table. persist() is used in place of save(), which is deprecated.
 
         // close session and sessionFactory. Always close what's opened.
-        session.close();
-        sessionFactory.close();
 
         transaction.commit(); // after inserting the data, finalizing the transaction through commit
+        session.close();
+        sessionFactory.close();
     }
 }
