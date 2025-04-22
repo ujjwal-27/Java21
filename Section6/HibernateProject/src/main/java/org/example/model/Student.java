@@ -1,5 +1,8 @@
 package org.example.model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Student {
     private int rollNo;
     private String name;
