@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Student s1 = new Student();
 
-        s1.setRollNo(17);
-        s1.setAge(26);
-        s1.setName("Ursula");
+        s1.setRollNo(1);
+        s1.setAge(29);
+        s1.setName("Jack");
 
         System.out.println(s1);
 

@@ -5,11 +5,14 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate_project</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">postgres</property>
-        
+
+        <!-- This property ensures auto creation/update of db-table based on entity class and its properties -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+        <!-- Certain features (like data type name) may vary based on DBMS. This property ensures to avoid any errors regarding dialect that may occur. However, it is not necessary to implement this property.  -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
+        <!-- These properties displays executed sql-queries -->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
