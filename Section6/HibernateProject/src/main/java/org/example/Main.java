@@ -16,6 +16,7 @@ public class Main {
         System.out.println(s1);
 
         Configuration cfg = new Configuration(); // create configuration object to config hibernate session
+        cfg.addAnnotatedClass(org.example.model.Student.class); // locate the model class with annotation '@Entity'
         cfg.configure();
 
         SessionFactory sessionFactory = cfg.buildSessionFactory(); // invoke buildSessionFactory() method
