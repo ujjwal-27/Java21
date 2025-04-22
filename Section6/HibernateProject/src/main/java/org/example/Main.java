@@ -16,11 +16,16 @@ public class Main {
 
         System.out.println(s1);
 
+        // code optimization
         Configuration cfg = new Configuration(); // create configuration object to config hibernate session
-        cfg.addAnnotatedClass(org.example.model.Student.class); // locate the model class with annotation '@Entity'
-        cfg.configure(); // invokes the xml-configuration file from 'resources/hibernate.cfg.xml'
+//        cfg.addAnnotatedClass(org.example.model.Student.class); // locate the model class with annotation '@Entity'
+//        cfg.configure(); // invokes the xml-configuration file from 'resources/hibernate.cfg.xml'
 
-        SessionFactory sessionFactory = cfg.buildSessionFactory(); // invoke buildSessionFactory() method
+        // code optimization
+        SessionFactory sessionFactory = cfg.addAnnotatedClass(org.example.model.Student.class)
+                                            .configure()
+                                            .buildSessionFactory(); // invoke buildSessionFactory() method
+
         Session session = sessionFactory.openSession(); // open session through session factory
 
         Transaction transaction = session.beginTransaction(); // start transaction to insert data in database
