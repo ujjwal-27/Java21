@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Student s1 = new Student();
 
-        s1.setRollNo(1);
-        s1.setAge(29);
-        s1.setName("Jack");
+        s1.setRollNo(5);
+        s1.setAge(30);
+        s1.setName("Jeff");
 
         System.out.println(s1);
 
@@ -25,7 +25,7 @@ public class Main {
 
         Transaction transaction = session.beginTransaction(); // start transaction to insert data in database
 
-        session.save(s1); // inserts data from s1 object to student table
+        session.persist(s1); // inserts data from s1 object to student table. persist() is used in place of save(), which is deprecated.
 
         transaction.commit(); // after inserting the data, finalizing the transaction through commit
     }
