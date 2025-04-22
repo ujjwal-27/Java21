@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) {
         Student s1 = new Student();
 
+        s1.setRollNo(7);
         s1.setAge(29);
         s1.setName("Ujjwal");
-        s1.setRollNo(7);
 
         System.out.println(s1);
 
